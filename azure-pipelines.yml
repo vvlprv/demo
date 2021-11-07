@@ -1,0 +1,54 @@
+{
+    "name": "vm",
+    "id": "/subscriptions/7bfe6194-1745-48a2-82ea-c2e999e9fd36/resourceGroups/learn-5434ab55-bde2-41c8-bd5a-342ad65225b0/providers/Microsoft.Compute/virtualMachines/vm",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "westus",
+    "properties": {
+        "vmId": "be685315-3361-43bd-b36f-6dec66b5d0da",
+        "hardwareProfile": {
+            "vmSize": "Standard_B1s"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "MicrosoftWindowsServer",
+                "offer": "WindowsServer",
+                "sku": "2016-datacenter-zhcn-g2",
+                "version": "latest"
+            },
+            "osDisk": {
+                "osType": "Windows",
+                "name": "vm_OsDisk_1_1e305268bddb44549d90f810b967a312",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/7bfe6194-1745-48a2-82ea-c2e999e9fd36/resourceGroups/learn-5434ab55-bde2-41c8-bd5a-342ad65225b0/providers/Microsoft.Compute/disks/vm_OsDisk_1_1e305268bddb44549d90f810b967a312"
+                },
+                "diskSizeGB": 127
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "vm",
+            "adminUsername": "vmuser",
+            "windowsConfiguration": {
+                "provisionVMAgent": true,
+                "enableAutomaticUpdates": true
+            },
+            "secrets": []
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/7bfe6194-1745-48a2-82ea-c2e999e9fd36/resourceGroups/learn-5434ab55-bde2-41c8-bd5a-342ad65225b0/providers/Microsoft.Network/networkInterfaces/vm652"
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true
+            }
+        },
+        "provisioningState": "Succeeded"
+    }
+}
